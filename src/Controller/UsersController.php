@@ -109,6 +109,14 @@ class UsersController extends AppController {
      */
 
     public function login() {
-        echo "Faisal";
+        if ($this->request->is('post')) {
+            $user = $this->Auth->identify();
+            if ($user) {
+                $this->Auth->setUser($user);
+                return $this->redirect(['controller' => 'posts']);
+            }
+            //Bad login
+            $this->Flash->error('Incorrect Login');
+        }
     }
 }

@@ -47,6 +47,9 @@ class AppController extends Controller {
         $this->loadComponent('Flash');
         $this->loadComponent('Auth', [
             'authenticate' => ['Form' => [
+                'passwordHasher' => [
+                    'className' => 'Legacy',
+                ],
                 'fields' => [
                     'username' => 'email',
                     'password' => 'password',

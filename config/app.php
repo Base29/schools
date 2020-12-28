@@ -57,7 +57,7 @@ return [
         'webroot' => 'webroot',
         'wwwRoot' => WWW_ROOT,
         //'baseUrl' => env('SCRIPT_NAME'),
-        'fullBaseUrl' => false,
+         'fullBaseUrl' => false,
         'imageBaseUrl' => 'img/',
         'cssBaseUrl' => 'css/',
         'jsBaseUrl' => 'js/',
@@ -217,8 +217,8 @@ return [
              * It is recommended to set these options through your environment or app_local.php
              */
             //'username' => null,
-            //'password' => null,
-            'client' => null,
+             //'password' => null,
+             'client' => null,
             'tls' => false,
             'url' => env('EMAIL_TRANSPORT_DEFAULT_URL', null),
         ],
@@ -270,17 +270,17 @@ return [
              * the following line and set the port accordingly
              */
             //'port' => 'non_standard_port_number',
-            /*
+             /*
              * It is recommended to set these options through your environment or app_local.php
              */
-            //'username' => 'my_app',
-            //'password' => 'secret',
-            //'database' => 'my_app',
+            'username' => 'root',
+            'password' => '',
+            'database' => 'schools',
             /*
              * You do not need to set this flag to use full utf-8 encoding (internal default since CakePHP 3.6).
              */
             //'encoding' => 'utf8mb4',
-            'timezone' => 'UTC',
+             'timezone' => 'UTC',
             'flags' => [],
             'cacheMetadata' => true,
             'log' => false,
@@ -316,16 +316,16 @@ return [
             'persistent' => false,
             'host' => 'localhost',
             //'port' => 'non_standard_port_number',
-            'username' => 'my_app',
+             'username' => 'my_app',
             'password' => 'secret',
             'database' => 'test_myapp',
             //'encoding' => 'utf8mb4',
-            'timezone' => 'UTC',
+             'timezone' => 'UTC',
             'cacheMetadata' => true,
             'quoteIdentifiers' => false,
             'log' => false,
             //'init' => ['SET GLOBAL innodb_stats_on_metadata = 0'],
-            'url' => env('DATABASE_TEST_URL', null),
+             'url' => env('DATABASE_TEST_URL', null),
         ],
     ],
 
@@ -350,7 +350,7 @@ return [
             'levels' => ['warning', 'error', 'critical', 'alert', 'emergency'],
         ],
         // To enable this dedicated query log, you need set your datasource's log flag to true
-        'queries' => [
+         'queries' => [
             'className' => FileLog::class,
             'path' => LOGS,
             'file' => 'queries',

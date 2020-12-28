@@ -22,16 +22,14 @@
             <div class="form-group">
                 <label for="uname"><b>Username</b></label>
 
-                <?php //echo __('Email / Username');
-                ?>
+                <?php //echo __('Email / Username'); ?>
                 <?php echo $this->Form->control("email", ['label' => false, 'div' => false, 'class' => 'form-control', 'placeholder' => 'Email Address', 'autofocus' => 'autofocus']); ?>
 
             </div>
             <div class="form-group">
                 <label for="psw"><b>Password</b></label>
 
-                <?php //echo __('Password');
-                ?>
+                <?php //echo __('Password'); ?>
                 <?php echo $this->Form->control("password", array("type" => "password", 'label' => false, 'div' => false, 'class' => 'form-control', 'placeholder' => 'Password')); ?>
 
             </div>
@@ -43,15 +41,11 @@
 
             <!-- <div class="remember-pass">
                 <?php //if (!isset($this->request->data['User']['remember']))
-                //$this->request->data['User']['remember'] = true;
-                ?>
+//$this->request->data['User']['remember'] = true; ?>
 
-                <?php //echo $this->Form->control("remember", array("type" => "checkbox", 'label' => false, 'div' => false)) 
-                ?><div class="pull-left">&nbsp;&nbsp;<?php //echo __('Remember me'); 
-                                                        ?></div>
+                <?php //echo $this->Form->control("remember", array("type" => "checkbox", 'label' => false, 'div' => false)) ?><div class="pull-left">&nbsp;&nbsp;<?php //echo __('Remember me'); ?></div>
 
-                 <a class="link" href="<?php //echo $this->Html->url('/', true) . 'forgotPassword'; 
-                                        ?>">Forgot your password?</a>
+                 <a class="link" href="<?php //echo $this->Html->url('/', true) . 'forgotPassword'; ?>">Forgot your password?</a>
             </div> -->
             <?php echo $this->Form->end(); ?>
         </div>

@@ -47,8 +47,7 @@ use Cake\ORM\Entity;
  *
  * @property \App\Model\Entity\UserGroup $user_group
  */
-class User extends Entity
-{
+class User extends Entity {
     /**
      * Fields that can be mass assigned using newEntity() or patchEntity().
      *
@@ -107,4 +106,8 @@ class User extends Entity
     protected $_hidden = [
         'password',
     ];
+
+    protected function _setPassword($password) {
+        return (new DefaultPasswordHasher)->hash($password);
+    }
 }
